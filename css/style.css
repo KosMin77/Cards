@@ -1,0 +1,73 @@
+/* styles goes here */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/wood-texture-072.jpg);
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.wrap-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+img {
+    height: 250px;
+    width: 165px;
+    border-radius: 10px;
+}
+
+label {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+    z-index: 20;
+}
+
+.card div {
+    text-align: center;
+    backface-visibility: hidden;
+    border-radius: 2px;
+}
+
+.card .back {
+    margin-top: -256px;
+    transform: rotateY(180deg);
+}
+
+.front {
+    margin-top: 25px;
+
+}
+
+input {
+    display: none;
+}
+
+:checked+.card {
+    transform: rotateY(180deg);
+}
+
+label:hover :checked+.card {
+    transform: rotateY(180deg);
+}
